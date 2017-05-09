@@ -1,0 +1,10 @@
+.my-drop-area {
+  width: 150px;
+  height: 50px;
+  background-color: lightgray;
+}
+
+.app-upload__dragover {
+  border: 1px dashed blue;
+  background-color: white;
+}

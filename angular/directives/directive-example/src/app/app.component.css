@@ -1,0 +1,9 @@
+.click-area {
+  width: 100px;
+  height: 100px;
+  background-color: beige;
+}
+
+.is-hovered {
+  border: 1px dashed darkblue;
+}

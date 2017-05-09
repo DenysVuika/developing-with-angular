@@ -1,0 +1,17 @@
+<h1>
+  {{title}}
+</h1>
+
+<div class="attach-area" appAttach [multiple]="true"
+    (attach-files)="onAttachFiles($event)">
+  <div>
+    Click me to upload files
+  </div>
+</div>
+
+<h3>Files attached</h3>
+<ul>
+  <li *ngFor="let file of files">
+    {{file.name}}
+  </li>
+</ul>

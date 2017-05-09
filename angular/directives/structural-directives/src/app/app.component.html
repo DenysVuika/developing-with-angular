@@ -1,0 +1,90 @@
+<h1>
+  {{title}}
+</h1>
+
+<hr>
+<h2>NgIf</h2>
+
+<button (click)="extraContent = !extraContent">Toggle extra content</button>
+<div *ngIf="extraContent; then mainView else emptyView"></div>
+
+<ng-template #mainView>
+  <h2>Extra content comes here</h2>
+</ng-template>
+
+<ng-template #emptyView>
+  <h3>No extra content available</h3>
+</ng-template>
+
+<hr>
+<h2>NgFor</h2>
+
+<h3>Binding to array</h3>
+
+<ul>
+  <li *ngFor="let num of [1,2,3,4,5]">
+    <span>{{num}}</span>
+  </li>
+</ul>
+
+<h3>Binding to property</h3>
+
+<ul>
+  <li *ngFor="let user of users; let i = index">
+    <div>
+      <span>{{i + 1}}: </span>
+      <span>{{user.firstName + ' ' + user.lastName}}</span>
+    </div>
+  </li>
+</ul>
+
+<h3>Using <strong>first</strong> and <strong>last</strong> values</h3>
+
+<ul>
+  <li *ngFor="let user of users; let isFirst = first; let isLast = last;">
+    <span>{{user.firstName + ' ' + user.lastName}}</span>
+    <span *ngIf="isFirst">(this is the first item)</span>
+    <span *ngIf="isLast">(this is the last item)</span>
+  </li>
+</ul>
+
+<h3>Using <strong>trackBy</strong></h3>
+
+<ul>
+  <li *ngFor="let user of users; trackBy: trackByUserId">
+    <span>{{user.firstName + ' ' + user.lastName}}</span>
+  </li>
+</ul>
+
+<hr>
+<h2>NgSwitch</h2>
+
+<select [(ngModel)]="selectedRole">
+  <option *ngFor="let role of roles">{{role.name}}</option>
+</select>
+
+<div [ngSwitch]="selectedRole" style="padding: 15px 0">
+
+  <div *ngSwitchCase="'administrator'">
+    Special layout for the <strong>administrator</strong> role
+  </div>
+
+  <div *ngSwitchCase="'guest'">
+    Special layout for the <strong>guest</strong> role
+  </div>
+
+  <div *ngSwitchDefault>
+    General UI for the roles
+  </div>
+
+</div>
+
+<hr>
+<h2>Custom <strong>appRepeat</strong> directive</h2>
+<div *appRepeat="5; let idx; let isFirst = first; let isLast = last;">
+    <div>
+      Hello {{idx}}
+      <span *ngIf="isFirst">(first)</span>
+      <span *ngIf="isLast">(last)</span>
+    </div>
+</div>

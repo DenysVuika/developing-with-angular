@@ -1,0 +1,18 @@
+<h1>
+  {{title}}
+</h1>
+
+<div (upload-files)="onUploadFiles($event)">
+  <div class="my-drop-area" appUpload>
+    <span>Drop your files here...</span>
+  </div>
+</div>
+
+<div>
+  <h3>Uploaded files:</h3>
+  <ul>
+    <li *ngFor="let file of uploadedFiles">
+      {{file}}
+    </li>
+  </ul>
+</div>

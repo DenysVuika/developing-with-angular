@@ -1,0 +1,22 @@
+<h1>Built-in attribute directives</h1>
+
+<h2>NgNonBindable</h2>
+<pre>
+  You can bind <strong>title</strong> property like following:
+  <code ngNonBindable>
+    &lt;div&gt;{{title}}&lt;/div&gt;
+  </code>
+</pre>
+
+
+<h2>NgStyle</h2>
+<h3>Inline</h3>
+<button [ngStyle]="{ 'border-width': '1px' }">button 1</button>
+<button [ngStyle]="{ 'border-width.px': '1' }">button 2</button>
+<button [ngStyle]="{
+  'background-color': 'white',
+  'border': '1px blue solid'
+}">button 3</button>
+
+<h3>Component property</h3>
+<input type="text" value="hello world" [ngStyle]="inputStyle">
