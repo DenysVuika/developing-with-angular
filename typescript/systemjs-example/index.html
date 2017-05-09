@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <script src="node_modules/systemjs/dist/system.js"></script>
+</head>
+<body>
+    <div id='content'></div>
+    <script>
+        SystemJS.config({
+            packages: {
+                '.': {
+                    defaultExtension: 'js'
+                }
+            }
+        });
+        SystemJS.import('/app/app.js');
+    </script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "name": "metadata-example",
+  "version": "1.0.0",
+  "description": "TypeScript metadata example",
+  "main": "main.js",
+  "author": "Denys Vuika",
+  "scripts": {
+    "build": "tsc && node main.js"
+  },
+  "license": "MIT",
+  "dependencies": {}
+}
