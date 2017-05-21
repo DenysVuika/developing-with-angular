@@ -1,0 +1,70 @@
+<h1>
+  {{title}}
+</h1>
+
+<h2>Uppercase</h2>
+<ul>
+  <li>'Hello world' → {{ 'Hellow world' | uppercase }}</li>
+</ul>
+
+<h2>Lowercase</h2>
+<ul>
+  <li>'hELLO wORLD' → {{ 'hELLO wORLD' | lowercase }}</li>
+</ul>
+
+<h2>Titlecase</h2>
+<ul>
+  <li>'jOHN' → {{ 'jOHN' | titlecase }}</li>
+</ul>
+
+<h2>Date</h2>
+<div>
+  Date: {{ currentDate | date }}
+</div>
+<div>
+  Short date: {{ currentDate | date:'shortDate' }}
+</div>
+<div>
+  Long date: {{ currentDate | date:'longDate' }}
+</div>
+<div>
+  Long date (uppercase): {{ currentDate | date:'fullDate' | uppercase }}
+</div>
+
+<h2>Date (custom formats)</h2>
+<ul>
+  <li>ISO string '1879-03-14' with 'yMMMdjms': {{'1879-03-14' | date:'yMMMdjms'}}</li>
+  <li>dd/MM/yy: {{ birthday | date:'dd/MM/yy' }}</li>
+  <li>EEE, MMMM dd, yyyy: {{ birthday | date:'EEE, MMMM dd, yyyy' }}</li>
+</ul>
+
+<h2>Date (predefined formats)</h2>
+<ul>
+  <li>medium: {{ birthday | date:'medium' }}</li>
+  <li>short: {{ birthday | date:'short' }}</li>
+  <li>fullDate: {{ birthday | date:'fullDate' }}</li>
+  <li>longDate: {{ birthday | date:'longDate' }}</li>
+  <li>mediumDate: {{ birthday | date:'mediumDate' }}</li>
+  <li>shortDate: {{ birthday | date:'shortDate' }}</li>
+  <li>mediumTime: {{ birthday | date:'mediumTime'}}</li>
+  <li>shortTime: {{ birthday | date:'shortTime' }}</li>
+</ul>
+
+<h2>Decimal (12.123456)</h2>
+<ul>
+  <li>string to number {{ '12.123456' | number }}</li>
+  <li>number → {{ 12.123456 | number }}</li>
+  <li>number:'2.1-2' → {{ 12.123456 | number:'2.1-2' }}</li>
+  <li>number:'3.0-0' → {{ 12.123456 | number:'3.0-0' }}</li>
+  <li>number:'3.10-15' → {{ 12.123456 | number:'3.10-15' }}</li>
+</ul>
+
+<h2>Currency</h2>
+<ul>
+  <li>GBP (code): {{ 150 | currency:'GBP' }}</li>
+  <li>GBP (symbol): {{ 150 | currency:'GBP':true }}</li>
+  <li>USD: {{ 0.9876 | currency:'USD':true:'2.2-2' }}</li>
+</ul>
+
+<h2>Json</h2>
+<pre>{{ complexObject | json }}</pre>
