@@ -68,3 +68,58 @@
 
 <h2>Json</h2>
 <pre>{{ complexObject | json }}</pre>
+
+<h2>Slice (arrays)</h2>
+<ul>
+  <li>
+    First 3 items:
+    <ul>
+      <li *ngFor="let num of numberCollection | slice:0:3">{{num}}</li>
+    </ul>
+  </li>
+  <li>
+    Last 3 items:
+    <ul>
+      <li *ngFor="let num of numberCollection | slice:-3">{{num}}</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Slice (strings)</h2>
+<ul>
+  <li>
+    First word of 'Hello world!':
+    {{ 'Hello world!' | slice:0:5 }}
+  </li>
+  <li>
+    Last word of 'Hello world!':
+    {{ 'Hello world!' | slice:-6:-1 }}
+  </li>
+</ul>
+
+<h2>Percent</h2>
+<ul>
+  <li>1.0 corresponds to {{ 1.0 | percent }}</li>
+  <li>0.5 corresponds to {{ 0.5 | percent }}</li>
+  <li>0.123456 corresponds to {{ 0.123456 | percent }}</li>
+  <li>0.123456 corresponds to {{ 0.123456 | percent:'1.1-5' }}</li>
+  <li>0.025 corresponds to {{ 0.025 | percent:'2.1' }}</li>
+</ul>
+
+<h2>I18nSelect</h2>
+<ul>
+  <li>{{ titleMode | i18nSelect:titleValues }}</li>
+  <li>
+    <button>{{ currentLanguage | i18nSelect:buttonLabels }}</button>
+  </li>
+</ul>
+
+<h2>I18nPluralPipe</h2>
+<ul>
+  <li *ngFor="let post of posts">
+    {{ post.content }}
+    <ul>
+      <li>{{ post.commentsCount | i18nPlural: commentLabels }}</li>
+    </ul>
+  </li>
+</ul>
