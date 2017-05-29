@@ -123,3 +123,19 @@
     </ul>
   </li>
 </ul>
+
+<h2>Async</h2>
+<ul>
+  <li *ngFor="let comment of comments | async">
+    {{ comment }}
+  </li>
+</ul>
+<button (click)="checkComments()">Check comments</button>
+<button (click)="resetComments()">Reset comments</button>
+
+<h2>Async (date/time)</h2>
+<ul>
+  <li>
+    Current time: {{ currentTime | async | date:'mediumTime' }}
+  </li>
+</ul>
