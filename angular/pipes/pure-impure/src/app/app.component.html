@@ -1,3 +1,40 @@
 <h1>
   {{title}}
 </h1>
+
+<h2>Posts</h2>
+<div>
+  <textarea [(ngModel)]="newPostContent"></textarea>
+</div>
+<div>
+  <label>
+    <input type="checkbox" [(ngModel)]="newPostPublic">
+    Is Public
+  </label>
+</div>
+<div>
+  <button (click)="createPost()">post</button>
+  <button (click)="mutateArray()">mutate array</button>
+</div>
+
+<h3>Public posts (pure)</h3>
+<ul>
+  <li *ngFor="let post of posts | publicPosts">
+    {{ post.content }} ({{ post.created | date:'short' }})
+  </li>
+</ul>
+
+<h3>Public posts (impure)</h3>
+<ul>
+  <li *ngFor="let post of posts | publicPostsImpure">
+    {{ post.content }} ({{ post.created | date:'short' }})
+  </li>
+</ul>
+
+<h3>All posts</h3>
+<ul>
+  <li *ngFor="let post of posts">
+    {{ post.content }} ({{ post.created | date:'short' }})
+  </li>
+</ul>
+
