@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  headerClicks = 0;
+
+  onTitleClicked() {
+    this.headerClicks += 1;
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -9,4 +9,11 @@ export class HeaderComponent {
 
   @Input()
   title: string = 'Header';
+
+  @Output()
+  titleClick = new EventEmitter();
+
+  handleTitleClick() {
+    this.titleClick.next();
+  }
 }

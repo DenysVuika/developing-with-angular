@@ -1,2 +1,8 @@
-<app-header [title]="title"></app-header>
+<app-header
+  [title]="title"
+  (titleClick)="onTitleClicked()">
+</app-header>
+<div>
+  Header clicks: {{ headerClicks }}
+</div>
 <app-footer></app-footer>
