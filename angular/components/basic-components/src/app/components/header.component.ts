@@ -8,7 +8,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent {
 
   @Input()
-  title: string = 'Header';
+  title = 'Header';
 
   @Output()
   titleClick = new EventEmitter();
