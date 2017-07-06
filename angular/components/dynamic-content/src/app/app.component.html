@@ -1,1 +1,8 @@
 <h1>Dynamic Content</h1>
+
+<h2>Templated List</h2>
+<app-templated-list [items]="listItems">
+  <ng-template let-item="$implicit" let-i="index">
+    <li>[{{i}}] Hello: {{item.title}}</li>
+  </ng-template>
+</app-templated-list>

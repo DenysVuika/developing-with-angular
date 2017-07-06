@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { TemplatedListComponent } from './templated-list/templated-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TemplatedListComponent
   ],
   imports: [
     BrowserModule

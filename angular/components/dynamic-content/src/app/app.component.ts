@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  listItems: Array<{title: string}> = [
+    { title: 'item 1' },
+    { title: 'item 2' },
+    { title: 'item 3' }
+  ]
 }
