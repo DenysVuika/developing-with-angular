@@ -6,3 +6,9 @@
     <li>[{{i}}] Hello: {{item.title}}</li>
   </ng-template>
 </app-templated-list>
+
+<h2>Dynamic Content</h2>
+<h3>Context: <input type="text" [(ngModel)]="context.text"></h3>
+<app-dynamic-content type="sample1" [context]="context"></app-dynamic-content>
+<app-dynamic-content type="sample2" [context]="context"></app-dynamic-content>
+<app-dynamic-content type="some-other-type" [context]="context"></app-dynamic-content>

@@ -13,4 +13,8 @@ export class AppComponent {
     { title: 'item 2' },
     { title: 'item 3' }
   ]
+
+  context: { text: string } = {
+      text: 'test'
+  }
 }
