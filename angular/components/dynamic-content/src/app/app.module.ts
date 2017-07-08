@@ -10,6 +10,7 @@ import {
   DynamicSample2Component,
   UnknownDynamicComponent
 } from './dynamic-content/dynamic-content.component';
+import { RuntimeContentComponent } from './runtime-content/runtime-content.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import {
     DynamicContentComponent,
     DynamicSample1Component,
     DynamicSample2Component,
-    UnknownDynamicComponent
+    UnknownDynamicComponent,
+    RuntimeContentComponent
   ],
   imports: [
     BrowserModule,
