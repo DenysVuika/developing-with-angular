@@ -1,0 +1,10 @@
+<div>
+  <h3>Template</h3>
+  <div>
+    <textarea rows="5" [(ngModel)]="template"></textarea>
+  </div>
+  <button (click)="compileTemplate()">Compile</button>
+
+  <h3>Output</h3>
+  <div #container></div>
+</div>
