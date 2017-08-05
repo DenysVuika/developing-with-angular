@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { Component1Component } from './component1/component1.component';
 import { Component2Component } from './component2/component2.component';
 
+import { LogService } from './services/log.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,9 @@ import { Component2Component } from './component2/component2.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [
+    LogService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
