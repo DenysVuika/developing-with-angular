@@ -28,10 +28,16 @@ export function dateFactory() {
     BrowserModule
   ],
   providers: [
-    // LogService
+    LogService,
     // { provide: LogService, useClass: CustomLogService }
-    { provide: LogService, useFactory: customLogServiceFactory },
-    { provide: 'DATE_NOW', useFactory: dateFactory }
+    // { provide: LogService, useFactory: customLogServiceFactory },
+    { provide: 'DATE_NOW', useFactory: dateFactory },
+    {
+      provide: 'logger.config', useValue: {
+        logLevel: 'info',
+        prefix: 'my-logger'
+      }
+    }
   ],
   bootstrap: [AppComponent]
 })
