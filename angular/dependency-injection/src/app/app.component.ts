@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ReflectiveInjector } from '@angular/core';
+import { LogService } from './services/log.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+
+  constructor() {
+    const injector = ReflectiveInjector.resolveAndCreate([ LogService ]);
+    const logService: LogService = injector.get(LogService);
+    logService.info('hello world');
+  }
 }
