@@ -1,4 +1,4 @@
-import { Injectable, Inject } from '@angular/core';
+import { Injectable, Inject, Optional } from '@angular/core';
 import { LOGGER_PLUGIN } from './../tokens';
 
 export interface LogPlugin {
@@ -10,12 +10,14 @@ export interface LogPlugin {
 @Injectable()
 export class CompositeLogService {
 
-  constructor(@Inject(LOGGER_PLUGIN) private plugins: LogPlugin[]) {
+  constructor(@Optional() @Inject(LOGGER_PLUGIN) private plugins: LogPlugin[]) {
     if (plugins && plugins.length > 0) {
       for (const plugin of plugins) {
         console.log(`Loading plugin: ${plugin.name} (level: ${plugin.level})`);
       }
       this.log('warn', 'All plugins loaded');
+    } else {
+      console.log('No logger plugins found.');
     }
   }
 

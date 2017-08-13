@@ -45,9 +45,9 @@ export function dateFactory() {
     },
     { provide: REST_API_URL, useValue: 'http://localhost:4200/api' },
 
-    CompositeLogService,
-    { provide: LOGGER_PLUGIN, useClass: ErrorLogPlugin, multi: true },
-    { provide: LOGGER_PLUGIN, useClass: WarningLogPlugin, multi: true }
+    CompositeLogService // ,
+    // { provide: LOGGER_PLUGIN, useClass: ErrorLogPlugin, multi: true },
+    // { provide: LOGGER_PLUGIN, useClass: WarningLogPlugin, multi: true }
   ],
   bootstrap: [AppComponent]
 })
