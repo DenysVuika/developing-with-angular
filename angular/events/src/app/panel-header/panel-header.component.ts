@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-panel-header',
@@ -13,8 +13,19 @@ export class PanelHeaderComponent {
   @Output()
   contentClick = new EventEmitter();
 
+  constructor(private elementRef: ElementRef) {
+  }
+
   onContentClicked() {
-    console.log('panel header clicked');
     this.contentClick.next();
+
+    this.elementRef.nativeElement.dispatchEvent(
+      new CustomEvent('header-click', {
+        detail: {
+          content: this.content
+        },
+        bubbles: true
+      })
+    );
   }
 }

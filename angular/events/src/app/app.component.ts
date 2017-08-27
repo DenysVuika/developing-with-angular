@@ -15,4 +15,8 @@ export class AppComponent {
     console.log('App component: Panel footer clicked');
   }
 
+  onDomHeaderClick(event) {
+    console.log(event);
+  }
+
 }
