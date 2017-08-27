@@ -1,0 +1,12 @@
+<app-panel-header
+  [content]="header"
+  (contentClick)="displayBody = !displayBody">
+</app-panel-header>
+
+<ng-container *ngIf="displayBody">
+  <p>
+    panel works!
+  </p>
+</ng-container>
+
+<app-panel-footer></app-panel-footer>
