@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter, ElementRef } from '@angular/core';
+import { PanelService } from '../panel.service';
 
 @Component({
   selector: 'app-panel-header',
@@ -13,12 +14,16 @@ export class PanelHeaderComponent {
   @Output()
   contentClick = new EventEmitter();
 
-  constructor(private elementRef: ElementRef) {
+  constructor(
+    private panelService: PanelService,
+    private elementRef: ElementRef) {
   }
 
   onContentClicked() {
+    // raise native event
     this.contentClick.next();
 
+    // raise DOM event
     this.elementRef.nativeElement.dispatchEvent(
       new CustomEvent('header-click', {
         detail: {
@@ -27,5 +32,8 @@ export class PanelHeaderComponent {
         bubbles: true
       })
     );
+
+    // raise service event
+    this.panelService.headerClicked.next(this);
   }
 }
