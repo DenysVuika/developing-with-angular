@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-panel',
@@ -7,8 +7,27 @@ import { Component, Input } from '@angular/core';
 })
 export class PanelComponent {
 
+  displayBody = true;
+
   @Input()
   header = 'My panel header';
 
-  displayBody = true;
+  @Input()
+  footer = 'My panel footer';
+
+  @Output()
+  headerClick = new EventEmitter();
+
+  @Output()
+  footerClick = new EventEmitter();
+
+  onHeaderClicked() {
+    this.displayBody = !this.displayBody;
+    this.headerClick.next();
+  }
+
+  onFooterClicked() {
+    this.footerClick.next();
+  }
+
 }

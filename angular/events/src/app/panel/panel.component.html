@@ -1,6 +1,6 @@
 <app-panel-header
   [content]="header"
-  (contentClick)="displayBody = !displayBody">
+  (contentClick)="onHeaderClicked()">
 </app-panel-header>
 
 <ng-container *ngIf="displayBody">
@@ -9,4 +9,7 @@
   </p>
 </ng-container>
 
-<app-panel-footer></app-panel-footer>
+<app-panel-footer
+  [content]="footer"
+  (contentClick)="onFooterClicked()">
+</app-panel-footer>

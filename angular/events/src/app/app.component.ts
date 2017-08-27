@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  onHeaderClicked() {
+    console.log('App component: Panel header clicked');
+  }
+
+  onFooterClicked() {
+    console.log('App component: Panel footer clicked');
+  }
+
 }
