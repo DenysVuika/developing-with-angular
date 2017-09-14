@@ -8,6 +8,6 @@ import { PanelFooterComponent } from './panel-footer/panel-footer.component';
 export class PanelService {
 
   headerClicked = new Subject<PanelHeaderComponent>();
-  footerClicked = new Subject<PanelHeaderComponent>();
+  footerClicked = new Subject<PanelFooterComponent>();
 
 }
