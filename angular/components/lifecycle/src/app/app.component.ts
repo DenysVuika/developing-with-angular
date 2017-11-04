@@ -10,4 +10,6 @@ export class AppComponent {
   @Input()
   text: string;
 
+  showNgOnInit = true;
+
 }

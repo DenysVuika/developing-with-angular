@@ -1,2 +1,16 @@
+<h2>ngOnChanges</h2>
+
 <input [(ngModel)]="text">
 <app-on-changes-demo [text]="text"></app-on-changes-demo>
+
+<hr>
+<h2>ngOnInit</h2>
+
+<label>
+  <input type="checkbox" [(ngModel)]="showNgOnInit">
+  Toggle ngOnInit demo
+</label>
+
+<ng-container *ngIf="showNgOnInit">
+  <app-on-init-demo></app-on-init-demo>
+</ng-container>
