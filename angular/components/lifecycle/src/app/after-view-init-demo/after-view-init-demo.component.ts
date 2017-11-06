@@ -1,11 +1,13 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
 
 @Component({
   selector: 'app-after-view-init-demo',
   templateUrl: './after-view-init-demo.component.html',
   styleUrls: ['./after-view-init-demo.component.css']
 })
-export class AfterViewInitDemoComponent implements AfterViewInit {
+export class AfterViewInitDemoComponent implements AfterViewInit, AfterViewChecked {
+
+  checked = 0;
 
   @ViewChild('prevPageButton')
   prevButton: ElementRef;
@@ -16,6 +18,10 @@ export class AfterViewInitDemoComponent implements AfterViewInit {
   ngAfterViewInit() {
     this.prevButton.nativeElement.innerText = 'Left Page';
     this.nextButton.nativeElement.innerText = 'Right Page';
+  }
+
+  ngAfterViewChecked() {
+    this.checked ++;
   }
 
 }
