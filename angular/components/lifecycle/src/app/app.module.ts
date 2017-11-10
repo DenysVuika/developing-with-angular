@@ -9,6 +9,7 @@ import { DoCheckDemoComponent } from './do-check-demo/do-check-demo.component';
 import { AfterContentInitDemoComponent } from './after-content-init-demo/after-content-init-demo.component';
 import { AfterContentInitChildComponent } from './after-content-init-child/after-content-init-child.component';
 import { AfterViewInitDemoComponent } from './after-view-init-demo/after-view-init-demo.component';
+import { OnDestroyDemoComponent } from './on-destroy-demo/on-destroy-demo.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AfterViewInitDemoComponent } from './after-view-init-demo/after-view-in
     DoCheckDemoComponent,
     AfterContentInitDemoComponent,
     AfterContentInitChildComponent,
-    AfterViewInitDemoComponent
+    AfterViewInitDemoComponent,
+    OnDestroyDemoComponent
   ],
   imports: [
     BrowserModule,

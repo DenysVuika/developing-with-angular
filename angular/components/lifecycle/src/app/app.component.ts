@@ -11,5 +11,6 @@ export class AppComponent {
   text: string;
 
   showNgOnInit = true;
+  showNgOnDestroy = true;
 
 }

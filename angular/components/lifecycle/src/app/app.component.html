@@ -29,3 +29,14 @@
 <hr>
 <h2>ngAfterViewInit</h2>
 <app-after-view-init-demo></app-after-view-init-demo>
+
+<hr>
+<h2>ngOnDestroy</h2>
+<label>
+  <input type="checkbox" [(ngModel)]="showNgOnDestroy">
+  Toggle ngOnDestroy demo
+</label>
+
+<ng-container *ngIf="showNgOnDestroy">
+  <app-on-destroy-demo></app-on-destroy-demo>
+</ng-container>
