@@ -1,0 +1,11 @@
+<p>
+  Current user: {{ currentUser.firstName + ' ' + currentUser.lastName }}
+  <br>
+  Previous user: {{ previousUser.firstName + ' ' + previousUser.lastName }}
+</p>
+
+<p>
+  Checks: {{ checks }} <br>
+  Updates: {{ updates }} <br>
+  <button (click)="updateUser()">Update user</button>
+</p>
