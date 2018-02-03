@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { PluginManager } from './plugin-manager';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+  plugins: string[];
+
+  constructor() {
+    const pluginManager = new PluginManager();
+    this.plugins = pluginManager.getPlugins();
+  }
 }
