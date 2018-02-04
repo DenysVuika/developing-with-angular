@@ -1,0 +1,8 @@
+{
+  "sidebar": {
+    "components": [
+      "app-page2",
+      "app-page1"
+    ]
+  }
+}

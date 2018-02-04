@@ -1,5 +1,7 @@
 import { Component, Compiler, ViewChild, ViewContainerRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { PluginsModule } from './plugins.module';
+import { SettingsComponent } from './settings/settings.component';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +15,11 @@ export class AppComponent {
 
   private module;
 
-  constructor(private compiler: Compiler) {
+  links: { text: string, path: string }[] = [];
+
+  constructor(private compiler: Compiler, private router: Router) {
     this.module = this.compiler.compileModuleAndAllComponentsSync(PluginsModule);
+    this.createRoute('Settings', 'settings', SettingsComponent);
   }
 
   createView(name: string) {
@@ -22,5 +27,14 @@ export class AppComponent {
 
     this.content.clear();
     this.content.createComponent(factory);
+  }
+
+  createRoute(text: string, path: string, componentType: any) {
+    this.router.config.unshift({
+      path: path,
+      component: componentType
+    });
+
+    this.links.push({ text, path });
   }
 }
