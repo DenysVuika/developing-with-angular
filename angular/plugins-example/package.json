@@ -1,0 +1,20 @@
+{
+  "name": "plugins-example",
+  "version": "1.0.0",
+  "main": "dist/bundle.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist && rollup -c"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-plugin-typescript2": "^0.10.0",
+    "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "@angular/core": "^5.2.2",
+    "rollup": "^0.55.1"
+  }
+}
