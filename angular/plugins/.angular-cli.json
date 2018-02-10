@@ -9,7 +9,9 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        { "glob": "bundle.js", "input": "../node_modules/plugins-core/dist/", "output": "./modules/plugins-core" },
+        { "glob": "bundle.js", "input": "../node_modules/plugins-example/dist", "output": "./modules/plugins-example" }
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -21,7 +23,9 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/systemjs/dist/system.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

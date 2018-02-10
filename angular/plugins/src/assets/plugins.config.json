@@ -1,4 +1,17 @@
 {
+  "system": {
+    "baseURL": "/assets/modules",
+    "paths": {
+      "npm:": "https://unpkg.com/"
+    },
+    "map": {
+      "@angular/core": "npm:@angular/core/bundles/core.umd.js",
+      "rxjs": "npm:rxjs",
+
+      "plugins-core": "/modules/plugins-core/bundle.js",
+      "plugins-example": "/modules/plugins-example/bundle.js"
+    }
+  },
   "sidebar": {
     "components": [
       "app-page2",
