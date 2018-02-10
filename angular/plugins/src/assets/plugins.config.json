@@ -17,5 +17,29 @@
       "app-page2",
       "app-page1"
     ]
+  },
+  "plugins": {
+    "modules": {
+      "plugins-core": "/modules/plugins-core/bundle.js" ,
+      "plugins-example": "/modules/plugins-example/bundle.js"
+    },
+    "routes": [
+      {
+        "name": "Plugin 1 (label)",
+        "path": "plugin1",
+        "component": {
+          "module": "plugins-example",
+          "componentType": "my-label"
+        }
+      },
+      {
+        "name": "Plugin 2 (button)",
+        "path": "plugin2",
+        "component": {
+          "module": "plugins-example",
+          "componentType": "my-button"
+        }
+      }
+    ]
   }
 }

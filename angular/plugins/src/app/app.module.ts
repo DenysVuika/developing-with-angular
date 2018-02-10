@@ -10,6 +10,7 @@ import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { SettingsComponent } from './settings/settings.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { DynamicPageComponent } from './dynamic-page/dynamic-page.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     AboutComponent,
     HomeComponent,
     SettingsComponent,
-    SidebarComponent
+    SidebarComponent,
+    DynamicPageComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     HttpClientModule
   ],
   entryComponents: [
-    SettingsComponent
+    SettingsComponent,
+    DynamicPageComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

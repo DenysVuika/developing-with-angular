@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { PluginsModule } from './plugins.module';
 import { SettingsComponent } from './settings/settings.component';
+import { DynamicPageComponent } from './dynamic-page/dynamic-page.component';
 
 import { System } from 'systemjs';
 declare var SystemJS: System;
@@ -52,6 +53,8 @@ export class AppComponent implements AfterViewInit {
 
     SystemJS.config(config.system);
 
+    this.loadExternalRoutes(config);
+
     const core = await SystemJS.import('plugins-core');
     const pluginExample = await SystemJS.import('plugins-example');
     console.log(core);
@@ -76,10 +79,23 @@ export class AppComponent implements AfterViewInit {
     this.content.createComponent(factory);
   }
 
-  createRoute(text: string, path: string, componentType: any) {
+  private async loadExternalRoutes(config: PluginsConfig) {
+    const core = await SystemJS.import('plugins-core');
+
+    for (const route of config.plugins.routes) {
+      const module = await SystemJS.import(route.component.module);
+      const componentType = core.pluginManager.getType(route.component.componentType);
+      this.createRoute(route.name, route.path, DynamicPageComponent, componentType);
+    }
+  }
+
+  createRoute(text: string, path: string, componentType: any, factoryType?: any) {
     this.router.config.unshift({
       path: path,
-      component: componentType
+      component: componentType,
+      data: {
+        factory: factoryType
+      }
     });
 
     this.links.push({ text, path });
