@@ -56,3 +56,7 @@ jobs:
       name: 'app-attach-directive'
       script:
         - cd angular/directives/app-attach-directive && npm i && npm run test:ci
+    - stage: test
+      name: 'app-upload-directive'
+      script:
+        - cd angular/directives/app-upload-directive && npm i && npm run test:ci

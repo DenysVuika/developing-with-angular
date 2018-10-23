@@ -1,14 +1,18 @@
-import { Directive, HostBinding, HostListener, ElementRef } from '@angular/core';
+import {
+  Directive,
+  HostBinding,
+  HostListener,
+  ElementRef
+} from '@angular/core';
 
 @Directive({
   selector: '[appUpload]'
 })
 export class UploadDirective {
-
   @HostBinding('class.app-upload__dragover')
   isDragOver: boolean;
 
-  constructor(private el: ElementRef) { }
+  constructor(private el: ElementRef) {}
 
   @HostListener('dragenter')
   onDragEnter() {
@@ -68,5 +72,4 @@ export class UploadDirective {
       );
     }
   }
-
 }
