@@ -10,18 +10,12 @@ describe('AppComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [
-        CommonModule,
-        HttpClientModule
-      ],
-      declarations: [
-        AppComponent,
-        TranslatePipe
-      ]
+      imports: [CommonModule, HttpClientModule],
+      declarations: [AppComponent, TranslatePipe]
     }).compileComponents();
 
     translateService = TestBed.get(TranslateService);
-    translateService.data = { 'TITLE': 'test app' };
+    translateService.data = { TITLE: 'test app' };
   }));
 
   it('should create the app', async(() => {
@@ -34,6 +28,8 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to test app!');
+    expect(compiled.querySelector('h1').textContent).toContain(
+      'Welcome to test app!'
+    );
   }));
 });
