@@ -72,3 +72,7 @@ jobs:
       name: 'structural-directives'
       script:
         - cd angular/directives/structural-directives && npm i && npm run test:ci
+    - stage: test
+      name: 'events'
+      script:
+        - cd angular/events && npm i && npm run test:ci

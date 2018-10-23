@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PanelComponent } from './panel.component';
+import { CommonModule } from '@angular/common';
+import { PanelHeaderComponent } from '../panel-header/panel-header.component';
+import { PanelFooterComponent } from '../panel-footer/panel-footer.component';
 
 describe('PanelComponent', () => {
   let component: PanelComponent;
@@ -8,9 +11,9 @@ describe('PanelComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PanelComponent ]
-    })
-    .compileComponents();
+      imports: [CommonModule],
+      declarations: [PanelComponent, PanelHeaderComponent, PanelFooterComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
