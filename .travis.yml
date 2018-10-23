@@ -60,3 +60,7 @@ jobs:
       name: 'app-upload-directive'
       script:
         - cd angular/directives/app-upload-directive && npm i && npm run test:ci
+    - stage: test
+      name: 'attribute-directives'
+      script:
+        - cd angular/directives/attribute-directives && npm i && npm run test:ci
