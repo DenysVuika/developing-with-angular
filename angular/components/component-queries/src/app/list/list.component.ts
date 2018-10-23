@@ -1,4 +1,11 @@
-import { Component, Input, ContentChild, AfterContentInit, ContentChildren, QueryList } from '@angular/core';
+import {
+  Component,
+  Input,
+  ContentChild,
+  AfterContentInit,
+  ContentChildren,
+  QueryList
+} from '@angular/core';
 import { ListItemComponent } from '../list-item/list-item.component';
 
 @Component({
@@ -7,7 +14,6 @@ import { ListItemComponent } from '../list-item/list-item.component';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements AfterContentInit {
-
   @Input()
   title = 'List Title';
 

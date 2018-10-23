@@ -36,3 +36,7 @@ jobs:
       name: 'component-providers'
       script:
         - cd angular/components/component-providers && npm i && npm run test:ci
+    - stage: test
+      name: 'component-queries'
+      script:
+        - cd angular/components/component-queries && npm i && npm run test:ci
