@@ -24,4 +24,4 @@ jobs:
     - stage: test
       name: 'basic-components'
       script:
-        - cd angular/basic-components && npm i && npm run test:ci
+        - cd angular/components/basic-components && npm i && npm run test:ci
