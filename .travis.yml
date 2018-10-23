@@ -68,3 +68,7 @@ jobs:
       name: 'directive-example'
       script:
         - cd angular/directives/directive-example && npm i && npm run test:ci
+    - stage: test
+      name: 'structural-directives'
+      script:
+        - cd angular/directives/structural-directives && npm i && npm run test:ci
