@@ -17,3 +17,7 @@ jobs:
       name: 'app-i18n'
       script:
         - cd angular/app-i18n && npm i && npm run test:ci
+    - stage: test
+      name: 'app-settings'
+      script:
+        - cd angular/app-settings && npm i && npm run test:ci
