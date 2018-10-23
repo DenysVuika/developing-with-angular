@@ -1,16 +1,19 @@
 dist: trusty
-sudo: required
 
 addons:
   chrome: stable
+
 language: node_js
+
 node_js:
   - '8'
+
 before_install:
   - npm install -g npm@latest
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - sleep 3
+
 jobs:
   include:
     - stage: test
@@ -25,3 +28,7 @@ jobs:
       name: 'basic-components'
       script:
         - cd angular/components/basic-components && npm i && npm run test:ci
+    - stage: test
+      name: 'component-host'
+      script:
+        - cd angular/components/component-host && npm i && npm run test:ci
