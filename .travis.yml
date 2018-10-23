@@ -80,3 +80,7 @@ jobs:
       name: 'ng-docker'
       script:
         - cd angular/ng-docker && npm i && npm run test:ci
+    - stage: test
+      name: 'custom-pipes'
+      script:
+        - cd angular/pipes/custom-pipes && npm i && npm run test:ci
