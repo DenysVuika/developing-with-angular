@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class CustomLogService {
-
   private prefix = '[custom]';
 
   setPrefix(value: string) {
@@ -12,5 +13,4 @@ export class CustomLogService {
   info(message: string) {
     console.log(`${this.prefix}: [info] ${message}`);
   }
-
 }

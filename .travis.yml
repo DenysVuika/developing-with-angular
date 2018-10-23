@@ -48,3 +48,7 @@ jobs:
       name: 'lifecycle'
       script:
         - cd angular/components/lifecycle && npm i && npm run test:ci
+    - stage: test
+      name: 'dependency-injection'
+      script:
+        - cd angular/dependency-injection && npm i && npm run test:ci
