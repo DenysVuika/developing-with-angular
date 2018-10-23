@@ -52,3 +52,7 @@ jobs:
       name: 'dependency-injection'
       script:
         - cd angular/dependency-injection && npm i && npm run test:ci
+    - stage: test
+      name: 'app-attach-directive'
+      script:
+        - cd angular/directives/app-attach-directive && npm i && npm run test:ci
