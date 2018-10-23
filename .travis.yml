@@ -40,3 +40,7 @@ jobs:
       name: 'component-queries'
       script:
         - cd angular/components/component-queries && npm i && npm run test:ci
+    - stage: test
+      name: 'dynamic-content'
+      script:
+        - cd angular/components/dynamic-content && npm i && npm run test:ci
