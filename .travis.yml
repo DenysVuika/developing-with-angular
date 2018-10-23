@@ -88,3 +88,7 @@ jobs:
       name: 'pure-impure'
       script:
         - cd angular/pipes/pure-impure && npm i && npm run test:ci
+    - stage: test
+      name: 'standard-pipes'
+      script:
+        - cd angular/pipes/standard-pipes && npm i && npm run test:ci
