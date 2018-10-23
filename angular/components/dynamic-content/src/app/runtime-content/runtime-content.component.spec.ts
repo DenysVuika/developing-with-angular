@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RuntimeContentComponent } from './runtime-content.component';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 describe('RuntimeContentComponent', () => {
   let component: RuntimeContentComponent;
@@ -8,9 +10,9 @@ describe('RuntimeContentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RuntimeContentComponent ]
-    })
-    .compileComponents();
+      imports: [CommonModule, FormsModule],
+      declarations: [RuntimeContentComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

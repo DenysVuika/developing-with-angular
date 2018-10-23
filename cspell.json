@@ -1,0 +1,10 @@
+{
+  "version": "0.1",
+  "language": "en",
+  "words": [
+    "Injectable",
+    "Truthy",
+    "codelyzer"
+  ],
+  "dictionaries": ["html", "en-gb", "en_US"]
+}

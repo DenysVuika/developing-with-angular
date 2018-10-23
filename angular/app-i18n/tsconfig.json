@@ -14,6 +14,12 @@
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "module": "es2015",
+    "baseUrl": "./"
+  },
+  "exclude": ["node_modules"],
+  "angularCompilerOptions": {
+    "preserveWhitespaces": false
   }
 }

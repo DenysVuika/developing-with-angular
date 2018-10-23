@@ -1,0 +1,94 @@
+dist: trusty
+
+addons:
+  chrome: stable
+
+language: node_js
+
+node_js:
+  - '8'
+
+before_install:
+  - npm install -g npm@latest
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sleep 3
+
+jobs:
+  include:
+    - stage: test
+      name: 'app-i18n'
+      script:
+        - cd angular/app-i18n && npm i && npm run test:ci
+    - stage: test
+      name: 'app-settings'
+      script:
+        - cd angular/app-settings && npm i && npm run test:ci
+    - stage: test
+      name: 'basic-components'
+      script:
+        - cd angular/components/basic-components && npm i && npm run test:ci
+    - stage: test
+      name: 'component-host'
+      script:
+        - cd angular/components/component-host && npm i && npm run test:ci
+    - stage: test
+      name: 'component-providers'
+      script:
+        - cd angular/components/component-providers && npm i && npm run test:ci
+    - stage: test
+      name: 'component-queries'
+      script:
+        - cd angular/components/component-queries && npm i && npm run test:ci
+    - stage: test
+      name: 'dynamic-content'
+      script:
+        - cd angular/components/dynamic-content && npm i && npm run test:ci
+    - stage: test
+      name: 'lifecycle'
+      script:
+        - cd angular/components/lifecycle && npm i && npm run test:ci
+    - stage: test
+      name: 'dependency-injection'
+      script:
+        - cd angular/dependency-injection && npm i && npm run test:ci
+    - stage: test
+      name: 'app-attach-directive'
+      script:
+        - cd angular/directives/app-attach-directive && npm i && npm run test:ci
+    - stage: test
+      name: 'app-upload-directive'
+      script:
+        - cd angular/directives/app-upload-directive && npm i && npm run test:ci
+    - stage: test
+      name: 'attribute-directives'
+      script:
+        - cd angular/directives/attribute-directives && npm i && npm run test:ci
+    - stage: test
+      name: 'directive-example'
+      script:
+        - cd angular/directives/directive-example && npm i && npm run test:ci
+    - stage: test
+      name: 'structural-directives'
+      script:
+        - cd angular/directives/structural-directives && npm i && npm run test:ci
+    - stage: test
+      name: 'events'
+      script:
+        - cd angular/events && npm i && npm run test:ci
+    - stage: test
+      name: 'ng-docker'
+      script:
+        - cd angular/ng-docker && npm i && npm run test:ci
+    - stage: test
+      name: 'custom-pipes'
+      script:
+        - cd angular/pipes/custom-pipes && npm i && npm run test:ci
+    - stage: test
+      name: 'pure-impure'
+      script:
+        - cd angular/pipes/pure-impure && npm i && npm run test:ci
+    - stage: test
+      name: 'standard-pipes'
+      script:
+        - cd angular/pipes/standard-pipes && npm i && npm run test:ci

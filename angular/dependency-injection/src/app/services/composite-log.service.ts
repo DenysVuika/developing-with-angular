@@ -7,10 +7,15 @@ export interface LogPlugin {
   log(message: string);
 }
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class CompositeLogService {
-
-  constructor(@Optional() @Inject(LOGGER_PLUGIN) private plugins: LogPlugin[]) {
+  constructor(
+    @Optional()
+    @Inject(LOGGER_PLUGIN)
+    private plugins: LogPlugin[]
+  ) {
     if (plugins && plugins.length > 0) {
       for (const plugin of plugins) {
         console.log(`Loading plugin: ${plugin.name} (level: ${plugin.level})`);
@@ -27,5 +32,4 @@ export class CompositeLogService {
       logger.log(message);
     }
   }
-
 }

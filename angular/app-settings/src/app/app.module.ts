@@ -1,33 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, APP_INITIALIZER } from '@angular/core';
-import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AppConfigService } from './app-config.service';
+import { HttpClientModule } from '@angular/common/http';
 
-export function setupAppConfigServiceFactory(service: AppConfigService): Function {
+export function setupAppConfigServiceFactory(
+  service: AppConfigService
+): Function {
   return () => service.load();
 }
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    HttpModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, HttpClientModule],
   providers: [
-    AppConfigService,
     {
-        provide: APP_INITIALIZER,
-        useFactory: setupAppConfigServiceFactory,
-        deps: [
-            AppConfigService
-        ],
-        multi: true
+      provide: APP_INITIALIZER,
+      useFactory: setupAppConfigServiceFactory,
+      deps: [AppConfigService],
+      multi: true
     }
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,6 +1,11 @@
-import { Component, ViewChild, AfterViewInit, QueryList, ViewChildren } from '@angular/core';
+import {
+  Component,
+  ViewChild,
+  AfterViewInit,
+  QueryList,
+  ViewChildren
+} from '@angular/core';
 import { ListComponent } from './list/list.component';
-import { ListItemComponent } from './list-item/list-item.component';
 
 @Component({
   selector: 'app-root',
@@ -8,7 +13,6 @@ import { ListItemComponent } from './list-item/list-item.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit {
-
   @ViewChild(ListComponent)
   list: ListComponent;
 
@@ -18,7 +22,7 @@ export class AppComponent implements AfterViewInit {
   ngAfterViewInit() {
     let i = 0;
     this.lists.forEach(l => {
-      l.title = 'Custom title #' + (i++);
+      l.title = 'Custom title #' + i++;
     });
   }
 }
