@@ -76,3 +76,7 @@ jobs:
       name: 'events'
       script:
         - cd angular/events && npm i && npm run test:ci
+    - stage: test
+      name: 'ng-docker'
+      script:
+        - cd angular/ng-docker && npm i && npm run test:ci
