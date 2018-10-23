@@ -64,3 +64,7 @@ jobs:
       name: 'attribute-directives'
       script:
         - cd angular/directives/attribute-directives && npm i && npm run test:ci
+    - stage: test
+      name: 'directive-example'
+      script:
+        - cd angular/directives/directive-example && npm i && npm run test:ci
