@@ -5,7 +5,6 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class TranslateService {
-
   data: any = {};
 
   constructor(private http: HttpClient) {}
@@ -19,7 +18,7 @@ export class TranslateService {
           this.data = response || {};
           resolve(this.data);
         },
-        err => {
+        () => {
           this.data = {};
           resolve(this.data);
         }
