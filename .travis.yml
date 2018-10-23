@@ -16,4 +16,4 @@ jobs:
     - stage: test
       name: 'app-i18n'
       script:
-        - cd angular/app-i18n && npm run test:ci
+        - cd angular/app-i18n && npm i && npm run test:ci
