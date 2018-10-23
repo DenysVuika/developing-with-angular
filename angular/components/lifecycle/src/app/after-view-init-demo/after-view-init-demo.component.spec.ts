@@ -8,15 +8,13 @@ describe('AfterViewInitDemoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AfterViewInitDemoComponent ]
-    })
-    .compileComponents();
+      declarations: [AfterViewInitDemoComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AfterViewInitDemoComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

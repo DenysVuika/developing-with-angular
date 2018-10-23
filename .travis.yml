@@ -44,3 +44,7 @@ jobs:
       name: 'dynamic-content'
       script:
         - cd angular/components/dynamic-content && npm i && npm run test:ci
+    - stage: test
+      name: 'lifecycle'
+      script:
+        - cd angular/components/lifecycle && npm i && npm run test:ci
