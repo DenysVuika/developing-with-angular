@@ -1,8 +1,9 @@
 import { Injectable, EventEmitter } from '@angular/core';
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ClickCounterService {
-
   clicks = 0;
 
   clicked = new EventEmitter<number>();
@@ -11,5 +12,4 @@ export class ClickCounterService {
     this.clicks += 1;
     this.clicked.emit(this.clicks);
   }
-
 }

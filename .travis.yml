@@ -32,3 +32,7 @@ jobs:
       name: 'component-host'
       script:
         - cd angular/components/component-host && npm i && npm run test:ci
+    - stage: test
+      name: 'component-providers'
+      script:
+        - cd angular/components/component-providers && npm i && npm run test:ci
