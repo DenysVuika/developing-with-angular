@@ -3,7 +3,8 @@
   "language": "en",
   "words": [
     "Injectable",
-    "Truthy"
+    "Truthy",
+    "codelyzer"
   ],
   "dictionaries": ["html", "en-gb", "en_US"]
 }
