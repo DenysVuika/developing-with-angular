@@ -15,6 +15,8 @@ steps:
       versionSpec: '10.x'
     displayName: 'Install Node.js'
 
+  # angular/app-i18n
+
   - task: Npm@1
     displayName: 'angular/app-i18n: install dependencies'
     inputs:
@@ -28,6 +30,8 @@ steps:
       customCommand: 'run test:ci'
       workingDir: './angular/app-i18n'
 
+  # angular/app-settings
+
   - task: Npm@1
     displayName: 'angular/app-settings: install dependencies'
     inputs:
@@ -40,3 +44,93 @@ steps:
       command: 'custom'
       customCommand: 'run test:ci'
       workingDir: './angular/app-settings'
+
+  # angular/components/basic-components
+
+  - task: Npm@1
+    displayName: 'angular/components/basic-components: install dependencies'
+    inputs:
+      command: 'install'
+      workingDir: './angular/components/basic-components'
+
+  - task: Npm@1
+    displayName: 'angular/components/basic-components: run unit tests'
+    inputs:
+      command: 'custom'
+      customCommand: 'run test:ci'
+      workingDir: './angular/components/basic-components'
+
+  # angular/components/component-host
+
+  - task: Npm@1
+    displayName: 'angular/components/component-host: install dependencies'
+    inputs:
+      command: 'install'
+      workingDir: './angular/components/component-host'
+
+  - task: Npm@1
+    displayName: 'angular/components/component-host: run unit tests'
+    inputs:
+      command: 'custom'
+      customCommand: 'run test:ci'
+      workingDir: './angular/components/component-host'
+
+  # angular/components/component-providers
+
+  - task: Npm@1
+    displayName: 'angular/components/component-providers: install dependencies'
+    inputs:
+      command: 'install'
+      workingDir: './angular/components/component-providers'
+
+  - task: Npm@1
+    displayName: 'angular/components/component-providers: run unit tests'
+    inputs:
+      command: 'custom'
+      customCommand: 'run test:ci'
+      workingDir: './angular/components/component-providers'
+
+  # angular/components/component-queries
+
+  - task: Npm@1
+    displayName: 'angular/components/component-queries: install dependencies'
+    inputs:
+      command: 'install'
+      workingDir: './angular/components/component-queries'
+
+  - task: Npm@1
+    displayName: 'angular/components/component-queries: run unit tests'
+    inputs:
+      command: 'custom'
+      customCommand: 'run test:ci'
+      workingDir: './angular/components/component-queries'
+
+  # angular/components/dynamic-content
+
+  - task: Npm@1
+    displayName: 'angular/components/dynamic-content: install dependencies'
+    inputs:
+      command: 'install'
+      workingDir: './angular/components/dynamic-content'
+
+  - task: Npm@1
+    displayName: 'angular/components/dynamic-content: run unit tests'
+    inputs:
+      command: 'custom'
+      customCommand: 'run test:ci'
+      workingDir: './angular/components/dynamic-content'
+
+  # angular/components/lifecycle
+
+  - task: Npm@1
+    displayName: 'angular/components/lifecycle: install dependencies'
+    inputs:
+      command: 'install'
+      workingDir: './angular/components/lifecycle'
+
+  - task: Npm@1
+    displayName: 'angular/components/lifecycle: run unit tests'
+    inputs:
+      command: 'custom'
+      customCommand: 'run test:ci'
+      workingDir: './angular/components/lifecycle'
