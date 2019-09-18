@@ -11,7 +11,7 @@
   "author": "Denys Vuika",
   "license": "MIT",
   "dependencies": {
-    "systemjs": "^0.20.5",
+    "systemjs": "^6.1.1",
     "typescript": "^3.6.3",
     "wsrv": "^0.1.6"
   }
