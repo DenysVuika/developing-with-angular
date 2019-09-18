@@ -21,7 +21,7 @@ steps:
     displayName: 'angular/app-i18n: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/app-i18n'
 
   # angular/app-settings
@@ -30,7 +30,7 @@ steps:
     displayName: 'angular/app-settings: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/app-settings'
 
   # angular/components/basic-components
@@ -39,7 +39,7 @@ steps:
     displayName: 'angular/components/basic-components: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/components/basic-components'
 
   # angular/components/component-host
@@ -48,7 +48,7 @@ steps:
     displayName: 'angular/components/component-host: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/components/component-host'
 
   # angular/components/component-providers
@@ -57,7 +57,7 @@ steps:
     displayName: 'angular/components/component-providers: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/components/component-providers'
 
   # angular/components/component-queries
@@ -66,7 +66,7 @@ steps:
     displayName: 'angular/components/component-queries: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/components/component-queries'
 
   # angular/components/dynamic-content
@@ -75,7 +75,7 @@ steps:
     displayName: 'angular/components/dynamic-content: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/components/dynamic-content'
 
   # angular/components/lifecycle
@@ -84,7 +84,7 @@ steps:
     displayName: 'angular/components/lifecycle: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/components/lifecycle'
 
   # angular/dependency-injection
@@ -93,7 +93,7 @@ steps:
     displayName: 'angular/dependency-injection: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/dependency-injection'
 
   # angular/directives/app-attach-directive
@@ -102,7 +102,7 @@ steps:
     displayName: 'angular/directives/app-attach-directive: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/directives/app-attach-directive'
 
   # angular/directives/app-upload-directive
@@ -111,7 +111,7 @@ steps:
     displayName: 'angular/directives/app-upload-directive: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/directives/app-upload-directive'
 
   # angular/directives/attribute-directives
@@ -120,7 +120,7 @@ steps:
     displayName: 'angular/directives/attribute-directives: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/directives/attribute-directives'
 
   # angular/directives/directive-example
@@ -129,7 +129,7 @@ steps:
     displayName: 'angular/directives/directive-example: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/directives/directive-example'
 
   # angular/directives/structural-directives
@@ -138,7 +138,7 @@ steps:
     displayName: 'angular/directives/structural-directives: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/directives/structural-directives'
 
   # angular/events
@@ -147,7 +147,7 @@ steps:
     displayName: 'angular/events: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/events'
 
   # angular/ng-docker
@@ -156,7 +156,7 @@ steps:
     displayName: 'angular/ng-docker: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/ng-docker'
 
   # angular/pipes/custom-pipes
@@ -165,7 +165,7 @@ steps:
     displayName: 'angular/pipes/custom-pipes: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/pipes/custom-pipes'
 
   # angular/pipes/pure-impure
@@ -174,7 +174,7 @@ steps:
     displayName: 'angular/pipes/pure-impure: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/pipes/pure-impure'
 
   # angular/pipes/standard-pipes
@@ -183,7 +183,7 @@ steps:
     displayName: 'angular/pipes/standard-pipes: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/pipes/standard-pipes'
 
   # angular/plugins
@@ -192,5 +192,5 @@ steps:
     displayName: 'angular/plugins: run unit tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test:ci || exit 1'
+      customCommand: 'run test:ci'
       workingDir: './angular/plugins'
