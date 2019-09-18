@@ -3,7 +3,10 @@
 const child_process = require('child_process');
 const path = require('path');
 
-const currentPath = path.resolve(path.relative(__dirname, process.cwd()));
+const currentPath = path.join(
+  __dirname,
+  path.relative(__dirname, process.cwd())
+);
 console.log('path: ', currentPath);
 
 const result = child_process
