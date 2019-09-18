@@ -40,7 +40,7 @@
     "jasmine-core": "2.5.2",
     "karma": "1.4.1",
     "karma-chrome-launcher": "2.0.0",
-    "karma-coverage": "1.1.1",
+    "karma-coverage": "2.0.1",
     "karma-jasmine": "1.1.0",
     "karma-mocha-reporter": "2.2.2",
     "karma-remap-istanbul": "0.6.0",
