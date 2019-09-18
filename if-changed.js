@@ -4,6 +4,7 @@ const child_process = require('child_process');
 const path = require('path');
 
 const currentPath = path.relative(__dirname, process.cwd());
+console.log('path: ', currentPath);
 
 const result = child_process
   .execSync('git diff --name-only origin/master... | cat')
