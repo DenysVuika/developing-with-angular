@@ -1,6 +1,7 @@
 {
   "name": "app-settings",
   "version": "0.0.0",
+  "description": "Example project",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
