@@ -19,11 +19,11 @@ steps:
     displayName: 'Install dependencies'
     inputs:
       command: 'install'
-      workingDir: 'angular/i18n'
+      workingDir: './angular/app-i18n'
 
   - task: Npm@1
     displayName: 'Unit Tests'
     inputs:
       command: 'custom'
       customCommand: 'run test'
-      workingDir: 'angular/i18n'
+      workingDir: './angular/app-i18n'
