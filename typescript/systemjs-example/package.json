@@ -13,6 +13,6 @@
   "dependencies": {
     "systemjs": "^0.20.5",
     "typescript": "^3.6.3",
-    "wsrv": "^0.1.6"
+    "wsrv": "^0.2.2"
   }
 }
