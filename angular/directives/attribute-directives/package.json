@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "test:ci": "../../if-changed.js && ng test --watch=false || echo 'skipping tests'"
+    "test:ci": "../../if-changed.js && (npm install && ng test --watch=false) --watch=false || echo 'skipping tests'"
   },
   "private": true,
   "dependencies": {
