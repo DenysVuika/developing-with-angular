@@ -25,5 +25,5 @@ steps:
     displayName: 'Unit Tests'
     inputs:
       command: 'custom'
-      customCommand: 'run test'
+      customCommand: 'run test:ci'
       workingDir: './angular/app-i18n'
