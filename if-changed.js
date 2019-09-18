@@ -10,12 +10,12 @@ const result = child_process
   .toString();
 
 if (result) {
+  console.log(result);
+
   const dirs = result
     .split('\n')
     .filter(file => file)
     .map(file => path.dirname(file));
-
-  // console.log(dirs);
 
   for (const dir of dirs) {
     if (dir.startsWith(currentPath)) {
