@@ -23,9 +23,9 @@ if (result) {
 
   for (const dir of dirs) {
     if (dir.startsWith(currentPath)) {
-      process.exit(0);
+      process.exit(1);
     }
   }
 }
 
-process.exit(1);
+process.exit(0);
