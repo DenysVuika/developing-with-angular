@@ -3,7 +3,7 @@
 const child_process = require('child_process');
 const path = require('path');
 
-const currentPath = path.relative(__dirname, process.cwd());
+const currentPath = path.resolve(path.relative(__dirname, process.cwd()));
 console.log('path: ', currentPath);
 
 const result = child_process
@@ -16,7 +16,7 @@ if (result) {
   const dirs = result
     .split('\n')
     .filter(file => file)
-    .map(file => path.dirname(file));
+    .map(file => path.resolve(path.dirname(file)));
 
   for (const dir of dirs) {
     if (dir.startsWith(currentPath)) {
