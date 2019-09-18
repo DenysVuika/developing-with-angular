@@ -187,9 +187,9 @@
   version "8.2.7"
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-8.2.7.tgz#1c47a992fb98a25bdde325ed2ee67c6db9d1e383"
 
-"@angular/platform-browser-dynamic@^7.0.0":
-  version "7.2.15"
-  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-7.2.15.tgz#e697159b565ef78bd7d276fa876d099172ad8735"
+"@angular/platform-browser-dynamic@^8.2.7":
+  version "8.2.7"
+  resolved "https://registry.yarnpkg.com/@angular/platform-browser-dynamic/-/platform-browser-dynamic-8.2.7.tgz#fdb48f1e6a76930b5d14f1d3dd72498c9087c186"
   dependencies:
     tslib "^1.9.0"
 
