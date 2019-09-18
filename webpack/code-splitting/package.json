@@ -57,6 +57,6 @@
     "webpack": "2.2.1",
     "webpack-dev-server": "2.3.0",
     "webpack-merge": "3.0.0",
-    "wsrv": "0.1.6"
+    "wsrv": "0.2.2"
   }
 }
