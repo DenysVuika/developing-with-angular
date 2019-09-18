@@ -62,7 +62,7 @@ update_configs:
     directory: '/angular/plugins'
     update_schedule: 'live'
   - package_manager: 'javascript'
-    directory: '/angular/plugins/core'
+    directory: '/angular/plugins-core'
     update_schedule: 'live'
   - package_manager: 'javascript'
     directory: '/typescript/plugins-example'
