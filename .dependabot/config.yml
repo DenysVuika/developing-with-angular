@@ -65,7 +65,7 @@ update_configs:
     directory: '/angular/plugins/core'
     update_schedule: 'live'
   - package_manager: 'javascript'
-    directory: '/angular/plugins/example'
+    directory: '/typescript/plugins-example'
     update_schedule: 'live'
   - package_manager: 'javascript'
     directory: '/typescript/metadata-example'
