@@ -16,14 +16,27 @@ steps:
     displayName: 'Install Node.js'
 
   - task: Npm@1
-    displayName: 'Install dependencies'
+    displayName: 'angular/app-i18n: install dependencies'
     inputs:
       command: 'install'
       workingDir: './angular/app-i18n'
 
   - task: Npm@1
-    displayName: 'Unit Tests'
+    displayName: 'angular/app-i18n: run unit tests'
     inputs:
       command: 'custom'
       customCommand: 'run test:ci'
       workingDir: './angular/app-i18n'
+
+  - task: Npm@1
+    displayName: 'angular/app-settings: install dependencies'
+    inputs:
+      command: 'install'
+      workingDir: './angular/app-settings'
+
+  - task: Npm@1
+    displayName: 'angular/app-settings: run unit tests'
+    inputs:
+      command: 'custom'
+      customCommand: 'run test:ci'
+      workingDir: './angular/app-settings'
