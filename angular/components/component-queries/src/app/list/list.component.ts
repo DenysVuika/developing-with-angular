@@ -17,7 +17,7 @@ export class ListComponent implements AfterContentInit {
   @Input()
   title = 'List Title';
 
-  @ContentChild(ListItemComponent)
+  @ContentChild(ListItemComponent, { static: false })
   firstListItem: ListItemComponent;
 
   @ContentChildren(ListItemComponent)

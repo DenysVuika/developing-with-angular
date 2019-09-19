@@ -1,18 +1,25 @@
-import { Component, OnInit, AfterViewInit, ViewChild, ElementRef, AfterViewChecked } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+  AfterViewChecked
+} from '@angular/core';
 
 @Component({
   selector: 'app-after-view-init-demo',
   templateUrl: './after-view-init-demo.component.html',
   styleUrls: ['./after-view-init-demo.component.css']
 })
-export class AfterViewInitDemoComponent implements AfterViewInit, AfterViewChecked {
-
+export class AfterViewInitDemoComponent
+  implements AfterViewInit, AfterViewChecked {
   checked = 0;
 
-  @ViewChild('prevPageButton')
+  @ViewChild('prevPageButton', { static: false })
   prevButton: ElementRef;
 
-  @ViewChild('nextPageButton')
+  @ViewChild('nextPageButton', { static: false })
   nextButton: ElementRef;
 
   ngAfterViewInit() {
@@ -21,7 +28,6 @@ export class AfterViewInitDemoComponent implements AfterViewInit, AfterViewCheck
   }
 
   ngAfterViewChecked() {
-    this.checked ++;
+    this.checked++;
   }
-
 }
