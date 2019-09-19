@@ -1,4 +1,10 @@
-import { Component, OnInit, AfterContentInit, ContentChild, AfterContentChecked } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  AfterContentInit,
+  ContentChild,
+  AfterContentChecked
+} from '@angular/core';
 import { AfterContentInitChildComponent } from '../after-content-init-child/after-content-init-child.component';
 
 @Component({
@@ -6,11 +12,11 @@ import { AfterContentInitChildComponent } from '../after-content-init-child/afte
   templateUrl: './after-content-init-demo.component.html',
   styleUrls: ['./after-content-init-demo.component.css']
 })
-export class AfterContentInitDemoComponent implements AfterContentInit, AfterContentChecked {
-
+export class AfterContentInitDemoComponent
+  implements AfterContentInit, AfterContentChecked {
   checked = 0;
 
-  @ContentChild(AfterContentInitChildComponent)
+  @ContentChild(AfterContentInitChildComponent, { static: false })
   child: AfterContentInitChildComponent;
 
   ngAfterContentInit() {
@@ -18,7 +24,6 @@ export class AfterContentInitDemoComponent implements AfterContentInit, AfterCon
   }
 
   ngAfterContentChecked() {
-    this.checked ++;
+    this.checked++;
   }
-
 }
