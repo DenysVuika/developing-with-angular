@@ -5,8 +5,9 @@
       "npm:": "https://unpkg.com/"
     },
     "map": {
-      "@angular/core": "npm:@angular/core/bundles/core.umd.js",
-      "rxjs": "npm:rxjs",
+      "@angular/core": "npm:@angular/core@8.2.7/bundles/core.umd.js",
+      "rxjs": "npm:rxjs@6.5.3/bundles/rxjs.umd.js",
+      "rxjs/operators": "npm:rxjs@6.5.3/operators/index.js",
 
       "plugins-core": "/modules/plugins-core/bundle.js",
       "plugins-example": "/modules/plugins-example/bundle.js"

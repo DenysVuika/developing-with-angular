@@ -23,10 +23,10 @@
     "@angular/router": "^8.2.7",
     "core-js": "^2.4.1",
     "rxjs": "^6.5.3",
-    "systemjs": "^0.21.0",
+    "rxjs-compat": "^6.0.0-rc.0",
+    "systemjs": "0.21.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1",
-    "rxjs-compat": "^6.0.0-rc.0"
+    "zone.js": "~0.9.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.5",
