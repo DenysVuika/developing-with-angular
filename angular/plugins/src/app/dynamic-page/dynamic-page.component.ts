@@ -11,7 +11,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DynamicPageComponent implements OnInit, OnDestroy {
 
-  @ViewChild('content',  { read: ViewContainerRef })
+  @ViewChild('content', { read: ViewContainerRef, static: true })
   content: ViewContainerRef;
 
   component: ComponentRef<any>;

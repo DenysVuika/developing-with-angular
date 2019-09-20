@@ -15,7 +15,7 @@ interface AppConfig {
 })
 export class SidebarComponent implements AfterViewInit {
 
-  @ViewChild('content', { read: ViewContainerRef })
+  @ViewChild('content', { read: ViewContainerRef, static: true })
   content: ViewContainerRef;
 
   private module;
