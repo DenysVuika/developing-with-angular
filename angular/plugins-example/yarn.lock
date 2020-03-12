@@ -241,9 +241,9 @@ rollup-pluginutils@^1.3.1:
     estree-walker "^0.2.1"
     minimatch "^3.0.2"
 
-rollup@^2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.0.4.tgz#23e7b20b4d653ad14db783630b4e44b69c1a0d97"
+rollup@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.0.5.tgz#55b8c0d62360a095e322ac7425b13ac5a97edcb4"
   optionalDependencies:
     fsevents "~2.1.2"
 
