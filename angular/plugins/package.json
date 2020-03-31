@@ -28,13 +28,13 @@
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.25",
+    "@angular-devkit/build-angular": "~0.803.26",
     "@angular/cli": "^8.3.19",
     "@angular/compiler-cli": "^8.2.7",
     "@angular/language-service": "^9.1.0",
     "@types/jasmine": "~3.5.10",
     "@types/jasminewd2": "~2.0.8",
-    "@types/node": "^13.9.6",
+    "@types/node": "^13.9.8",
     "codelyzer": "^5.2.0",
     "jasmine-core": "^3.5.0",
     "jasmine-spec-reporter": "~5.0.1",
