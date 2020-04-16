@@ -1,25 +1,34 @@
-import { Directive, Input, HostListener, ElementRef, Renderer, OnInit } from '@angular/core';
+import {
+  Directive,
+  Input,
+  HostListener,
+  ElementRef,
+  OnInit,
+  Renderer2,
+} from '@angular/core';
 
 @Directive({
-  selector: '[appAttach]'
+  selector: '[appAttach]',
 })
 export class AttachDirective implements OnInit {
-
   private upload: HTMLInputElement;
 
   @Input()
   multiple: boolean;
 
-  constructor(
-    private el: ElementRef,
-    private renderer: Renderer) {
-  }
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   ngOnInit(): void {
-    this.upload = this.renderer.createElement(this.el.nativeElement.parentNode, 'input') as HTMLInputElement;
+    this.upload = this.renderer.createElement('input');
+
+    const parent = this.el.nativeElement.parentNode;
+    if (parent) {
+      this.renderer.appendChild(parent, this.upload);
+    }
+
     this.upload.type = 'file';
     this.upload.style.display = 'none';
-    this.upload.addEventListener('change', e => this.onAttachFiles(e));
+    this.upload.addEventListener('change', (e) => this.onAttachFiles(e));
 
     if (this.multiple) {
       this.upload.setAttribute('multiple', '');
@@ -35,7 +44,7 @@ export class AttachDirective implements OnInit {
   }
 
   private onAttachFiles(e: Event): void {
-    const input = (<HTMLInputElement>e.currentTarget);
+    const input = <HTMLInputElement>e.currentTarget;
     const files = this.getFiles(input.files);
     this.raiseEvent(files);
   }
@@ -55,13 +64,12 @@ export class AttachDirective implements OnInit {
       const event = new CustomEvent('attach-files', {
         detail: {
           sender: this,
-          files: files
+          files: files,
         },
-        bubbles: true
+        bubbles: true,
       });
 
       this.el.nativeElement.dispatchEvent(event);
     }
   }
-
 }
