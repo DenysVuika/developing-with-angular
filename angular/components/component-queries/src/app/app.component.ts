@@ -13,7 +13,7 @@ import { ListComponent } from './list/list.component';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit {
-  @ViewChild(ListComponent, { static: false })
+  @ViewChild(ListComponent)
   list: ListComponent;
 
   @ViewChildren(ListComponent)

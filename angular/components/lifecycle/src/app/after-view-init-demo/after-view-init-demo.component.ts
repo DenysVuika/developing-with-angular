@@ -16,10 +16,10 @@ export class AfterViewInitDemoComponent
   implements AfterViewInit, AfterViewChecked {
   checked = 0;
 
-  @ViewChild('prevPageButton', { static: false })
+  @ViewChild('prevPageButton')
   prevButton: ElementRef;
 
-  @ViewChild('nextPageButton', { static: false })
+  @ViewChild('nextPageButton')
   nextButton: ElementRef;
 
   ngAfterViewInit() {

@@ -16,7 +16,7 @@ export class AfterContentInitDemoComponent
   implements AfterContentInit, AfterContentChecked {
   checked = 0;
 
-  @ContentChild(AfterContentInitChildComponent, { static: false })
+  @ContentChild(AfterContentInitChildComponent)
   child: AfterContentInitChildComponent;
 
   ngAfterContentInit() {
