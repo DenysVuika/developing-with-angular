@@ -2,11 +2,11 @@ import {
   Directive,
   HostBinding,
   HostListener,
-  ElementRef
+  ElementRef,
 } from '@angular/core';
 
 @Directive({
-  selector: '[appUpload]'
+  selector: '[appUpload]',
 })
 export class UploadDirective {
   @HostBinding('class.app-upload__dragover')
@@ -23,6 +23,7 @@ export class UploadDirective {
   onDragOver(event: Event) {
     if (event) {
       event.preventDefault();
+      event.stopPropagation();
     }
     this.isDragOver = true;
   }
@@ -65,9 +66,9 @@ export class UploadDirective {
         new CustomEvent('upload-files', {
           detail: {
             sender: this,
-            files: files
+            files: files,
           },
-          bubbles: true
+          bubbles: true,
         })
       );
     }
