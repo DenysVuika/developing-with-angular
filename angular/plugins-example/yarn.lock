@@ -218,15 +218,15 @@ rollup-plugin-node-resolve@^5.2.0:
     resolve "^1.11.1"
     rollup-pluginutils "^2.8.1"
 
-rollup-plugin-typescript2@^0.27.0:
-  version "0.27.0"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-typescript2/-/rollup-plugin-typescript2-0.27.0.tgz#95ff96f9e07d5000a9d2df4d76b548f9a1f83511"
+rollup-plugin-typescript2@^0.27.1:
+  version "0.27.1"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-typescript2/-/rollup-plugin-typescript2-0.27.1.tgz#4f27193408a8f040139eed3e3db7b0c7f3668200"
   dependencies:
     "@rollup/pluginutils" "^3.0.8"
     find-cache-dir "^3.3.1"
     fs-extra "8.1.0"
     resolve "1.15.1"
-    tslib "1.11.1"
+    tslib "1.11.2"
 
 rollup-plugin-typescript@^0.8.1:
   version "0.8.1"
@@ -265,9 +265,9 @@ tippex@^2.1.1:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/tippex/-/tippex-2.3.1.tgz#a2fd5b7087d7cbfb20c9806a6c16108c2c0fafda"
 
-tslib@1.11.1, tslib@^1.9.0:
-  version "1.11.1"
-  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.1.tgz#eb15d128827fbee2841549e171f45ed338ac7e35"
+tslib@1.11.2, tslib@^1.9.0:
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.11.2.tgz#9c79d83272c9a7aaf166f73915c9667ecdde3cc9"
 
 typescript@^1.8.9:
   version "1.8.10"
