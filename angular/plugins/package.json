@@ -24,7 +24,7 @@
     "rxjs": "^6.5.5",
     "rxjs-compat": "^6.5.5",
     "systemjs": "0.21.0",
-    "tslib": "^1.12.0",
+    "tslib": "^2.0.0",
     "zone.js": "~0.9.1"
   },
   "devDependencies": {
