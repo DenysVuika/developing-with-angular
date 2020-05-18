@@ -19,7 +19,7 @@
     "@angular/core": "^9.1.2",
     "@angular/forms": "^9.1.2",
     "@angular/platform-browser": "^9.1.2",
-    "@angular/platform-browser-dynamic": "^9.1.2",
+    "@angular/platform-browser-dynamic": "^9.1.7",
     "@angular/router": "^9.1.2",
     "rxjs": "^6.5.5",
     "tslib": "^1.13.0",
