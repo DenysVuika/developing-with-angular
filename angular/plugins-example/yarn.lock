@@ -251,9 +251,9 @@ rollup-pluginutils@^2.8.1:
   dependencies:
     estree-walker "^0.6.1"
 
-rollup@^2.12.1:
-  version "2.12.1"
-  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.12.1.tgz#f4e248552d0055ecbd6d0e888b7e316e172d5f96"
+rollup@^2.13.0:
+  version "2.13.0"
+  resolved "https://registry.yarnpkg.com/rollup/-/rollup-2.13.0.tgz#fe28513d31114f6ffb3ecb9dfe5ba04fba40d4b6"
   optionalDependencies:
     fsevents "~2.1.2"
 
