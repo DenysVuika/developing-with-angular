@@ -11,7 +11,7 @@
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-typescript": "^0.8.1",
     "rollup-plugin-typescript2": "^0.27.1",
-    "typescript": "^3.9.3"
+    "typescript": "^3.9.5"
   },
   "dependencies": {
     "@angular/core": "^8.2.14",
