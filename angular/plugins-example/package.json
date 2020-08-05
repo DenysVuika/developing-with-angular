@@ -14,7 +14,7 @@
     "typescript": "^3.9.3"
   },
   "dependencies": {
-    "@angular/core": "^8.2.14",
+    "@angular/core": "^10.0.8",
     "rollup": "^2.15.0"
   }
 }
