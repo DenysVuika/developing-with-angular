@@ -23,7 +23,7 @@
     "@angular/router": "^8.2.7",
     "rxjs": "^6.6.3",
     "rxjs-compat": "^6.6.3",
-    "systemjs": "0.21.0",
+    "systemjs": "6.7.0",
     "tslib": "^2.0.3",
     "zone.js": "~0.9.1"
   },
