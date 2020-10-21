@@ -6,18 +6,18 @@ import {
   OnInit,
   OnDestroy,
   ComponentRef,
-  ComponentFactoryResolver
+  ComponentFactoryResolver,
 } from '@angular/core';
 
 @Component({
   selector: 'app-dynamic-content',
   templateUrl: './dynamic-content.component.html',
-  styleUrls: ['./dynamic-content.component.css']
+  styleUrls: ['./dynamic-content.component.css'],
 })
 export class DynamicContentComponent implements OnInit, OnDestroy {
   private componentRef: ComponentRef<{}>;
 
-  @ViewChild('container', { read: ViewContainerRef, static: false })
+  @ViewChild('container', { read: ViewContainerRef, static: true })
   container: ViewContainerRef;
 
   @Input()
@@ -28,7 +28,7 @@ export class DynamicContentComponent implements OnInit, OnDestroy {
 
   private mappings = {
     sample1: DynamicSample1Component,
-    sample2: DynamicSample2Component
+    sample2: DynamicSample2Component,
   };
 
   getComponentType(typeName: string) {
@@ -66,24 +66,18 @@ export abstract class DynamicComponent {
 
 @Component({
   selector: 'app-dynamic-sample-1',
-  template: `
-    <div>Dynamic sample 1 ({{ context?.text }})</div>
-  `
+  template: ` <div>Dynamic sample 1 ({{ context?.text }})</div> `,
 })
 export class DynamicSample1Component extends DynamicComponent {}
 
 @Component({
   selector: 'app-dynamic-sample-2',
-  template: `
-    <div>Dynamic sample 2 ({{ context?.text }})</div>
-  `
+  template: ` <div>Dynamic sample 2 ({{ context?.text }})</div> `,
 })
 export class DynamicSample2Component extends DynamicComponent {}
 
 @Component({
   selector: 'app-unknown-component',
-  template: `
-    <div>Unknown component ({{ context?.text }})</div>
-  `
+  template: ` <div>Unknown component ({{ context?.text }})</div> `,
 })
 export class UnknownDynamicComponent extends DynamicComponent {}

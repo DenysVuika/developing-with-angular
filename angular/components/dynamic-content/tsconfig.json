@@ -16,6 +16,6 @@
       "es2016",
       "dom"
     ],
-    "module": "es2015"
+    "module": "es2020"
   }
 }

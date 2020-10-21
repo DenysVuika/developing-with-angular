@@ -6,7 +6,7 @@ import { Component, Input, ContentChild, TemplateRef } from '@angular/core';
   styleUrls: ['./templated-list.component.css']
 })
 export class TemplatedListComponent {
-  @ContentChild(TemplateRef, { static: false })
+  @ContentChild(TemplateRef)
   template: TemplateRef<any>;
 
   @Input()
