@@ -5,34 +5,29 @@ import {
   Compiler,
   ComponentFactory,
   NgModule,
-  ModuleWithComponentFactories,
-  ComponentFactoryResolver,
-  ComponentRef
+  ComponentRef,
 } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-runtime-content',
   templateUrl: './runtime-content.component.html',
-  styleUrls: ['./runtime-content.component.css']
+  styleUrls: ['./runtime-content.component.css'],
 })
 export class RuntimeContentComponent {
   private componentRef: ComponentRef<{}>;
 
-  @ViewChild('container', { read: ViewContainerRef, static: false })
+  @ViewChild('container', { read: ViewContainerRef })
   container: ViewContainerRef;
 
   template = '<div>\nHello, {{name}}\n</div>';
 
-  constructor(
-    private resolver: ComponentFactoryResolver,
-    private compiler: Compiler
-  ) {}
+  constructor(private compiler: Compiler) {}
 
   compileTemplate() {
     const metadata = {
       selector: `runtime-component-sample`,
-      template: this.template
+      template: this.template,
     };
 
     const factory = this.createComponentFactorySync(
@@ -62,16 +57,17 @@ export class RuntimeContentComponent {
         }
       };
     const decoratedCmp = Component(metadata)(cmpClass);
-
-    @NgModule({ imports: [CommonModule], declarations: [decoratedCmp] })
-    class RuntimeComponentModule {}
-
-    const module: ModuleWithComponentFactories<
-      any
-    > = compiler.compileModuleAndAllComponentsSync(RuntimeComponentModule);
+    const moduleClass = class RuntimeComponentModule {};
+    const decoratedNgModule = NgModule({
+      imports: [],
+      declarations: [decoratedCmp],
+    })(moduleClass);
+    const module = compiler.compileModuleAndAllComponentsSync(
+      decoratedNgModule
+    );
 
     return module.componentFactories.find(
-      f => f.componentType === decoratedCmp
+      (f) => f.componentType === decoratedCmp
     );
   }
 }
