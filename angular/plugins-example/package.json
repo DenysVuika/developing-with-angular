@@ -15,6 +15,6 @@
   },
   "dependencies": {
     "@angular/core": "^11.1.0",
-    "rollup": "^2.37.1"
+    "rollup": "^2.38.0"
   }
 }
