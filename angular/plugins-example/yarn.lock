@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@angular/core@^11.2.2":
-  version "11.2.2"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-11.2.2.tgz#b44c0f118b6520427b26a7b856e0ac79e58fd156"
+"@angular/core@^11.2.3":
+  version "11.2.3"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-11.2.3.tgz#7dd59f35e0b2410543a61be6048c474c18a43f40"
   dependencies:
     tslib "^2.0.0"
 
