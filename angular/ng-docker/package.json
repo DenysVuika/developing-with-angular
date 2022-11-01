@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "^10.1.6",
     "@angular/router": "^10.1.6",
     "rxjs": "^6.6.7",
-    "tslib": "^2.3.0",
+    "tslib": "^2.4.1",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
