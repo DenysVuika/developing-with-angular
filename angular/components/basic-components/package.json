@@ -25,7 +25,7 @@
     "@angular-devkit/build-angular": "~0.1002.0",
     "@angular/cli": "^10.2.0",
     "@angular/compiler-cli": "^10.1.6",
-    "@angular/language-service": "^12.0.5",
+    "@angular/language-service": "^15.1.0",
     "@types/jasmine": "3.7.7",
     "@types/node": "^15.12.2",
     "jasmine-core": "~3.7.1",
