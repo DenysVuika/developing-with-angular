@@ -43,6 +43,7 @@ jobs:
         with:
           node-version: 14
           cache: 'npm'
+          cache-dependency-path: ${{ matrix.unit-tests.path }}/package-lock.json
 
       - name: Test
         run: |
