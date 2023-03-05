@@ -27,7 +27,7 @@ jobs:
           - path: "./angular/directives/app-upload-directive"
           - path: "./angular/directives/attribute-directives"
           - path: "./angular/directives/directive-example"
-          - path: "./angular/directives/structural-directive"
+          - path: "./angular/directives/structural-directives"
           - path: "./angular/events"
           - path: "./angular/ng-docker"
           - path: "./angular/pipes/custom-pipes"
@@ -37,6 +37,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
