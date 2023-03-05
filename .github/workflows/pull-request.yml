@@ -1,0 +1,70 @@
+name: Verify
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+jobs:
+  test:
+    name: "Unit Tests"
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        unit-tests:
+          - path: "./angular/app-i18n"
+          - path: "./angular/app-settings"
+          - path: "./angular/components/basic-components"
+          - path: "./angular/components/component-host"
+          - path: "./angular/components/component-providers"
+          - path: "./angular/components/component-queries"
+          - path: "./angular/components/dynamic-content"
+          - path: "./angular/components/lifecycle"
+          - path: "./angular/dependency-injection"
+          - path: "./angular/directives/app-attach-directive"
+          - path: "./angular/directives/app-upload-directive"
+          - path: "./angular/directives/attribute-directives"
+          - path: "./angular/directives/directive-example"
+          - path: "./angular/directives/structural-directives"
+          - path: "./angular/events"
+          - path: "./angular/ng-docker"
+          - path: "./angular/pipes/custom-pipes"
+          - path: "./angular/pipes/pure-impure"
+          - path: "./angular/pipes/standard-pipes"
+          - path: "./angular/plugins"
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 14
+          cache: 'npm'
+          cache-dependency-path: ${{ matrix.unit-tests.path }}/package-lock.json
+
+      - name: Test
+        run: |
+          cd ${{ matrix.unit-tests.path }}
+          npm i
+          npm run test:ci
+        env:
+          CI: true
+
+  verify:
+    if: ${{ always() }}
+    needs: [test]
+    name: Verify
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify Jobs
+        if: >-
+            ${{
+                contains(needs.*.result, 'failure')
+              || contains(needs.*.result, 'cancelled')
+            }}
+        run: exit 1

@@ -1,8 +1,0 @@
-pull_request_rules:
-  - name: automatic merge for Dependabot pull requests
-    conditions:
-      - author=dependabot[bot]
-      - status-success=DenysVuika.developing-with-angular
-    actions:
-      merge:
-        method: merge
