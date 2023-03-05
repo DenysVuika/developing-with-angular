@@ -46,8 +46,8 @@ jobs:
 
       - name: Test
         run: |
-          cd ${{ matrix.test.path }}
-          npm ci
+          cd ${{ matrix.unit-tests.path }}
+          npm i
           npm run test:ci
         env:
           CI: true
