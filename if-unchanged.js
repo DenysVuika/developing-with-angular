@@ -10,7 +10,7 @@ const currentPath = path.join(
 console.log('path: ', currentPath);
 
 const result = child_process
-  .execSync('git diff --name-only origin/master... -- | cat')
+  .execSync('git diff --name-only master... -- | cat')
   .toString();
 
 if (result) {
