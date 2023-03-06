@@ -7,7 +7,7 @@
     "start": "ng serve --open",
     "build": "ng build",
     "test": "ng test",
-    "test:ci": "../../if-unchanged.js && echo \"skipping tests\" || ng test --watch=false --browsers=ChromeHeadless"
+    "test:ci": "(../../../if-unchanged.js || exit 1) && echo \"skipping tests\" || ng test --watch=false --browsers=ChromeHeadless"
   },
   "private": true,
   "dependencies": {
