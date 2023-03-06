@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { OnDestroyDemoComponent } from './on-destroy-demo.component';
 
@@ -6,7 +6,7 @@ describe('OnDestroyDemoComponent', () => {
   let component: OnDestroyDemoComponent;
   let fixture: ComponentFixture<OnDestroyDemoComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ OnDestroyDemoComponent ]
     })
