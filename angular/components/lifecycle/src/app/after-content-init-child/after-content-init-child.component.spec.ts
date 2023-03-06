@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { AfterContentInitChildComponent } from './after-content-init-child.component';
 
@@ -6,7 +6,7 @@ describe('AfterContentInitChildComponent', () => {
   let component: AfterContentInitChildComponent;
   let fixture: ComponentFixture<AfterContentInitChildComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ AfterContentInitChildComponent ]
     })

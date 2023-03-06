@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { AfterViewInitDemoComponent } from './after-view-init-demo.component';
 
@@ -6,7 +6,7 @@ describe('AfterViewInitDemoComponent', () => {
   let component: AfterViewInitDemoComponent;
   let fixture: ComponentFixture<AfterViewInitDemoComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [AfterViewInitDemoComponent]
     }).compileComponents();

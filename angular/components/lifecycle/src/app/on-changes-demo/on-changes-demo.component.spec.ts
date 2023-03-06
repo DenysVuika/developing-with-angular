@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { OnChangesDemoComponent } from './on-changes-demo.component';
 
@@ -6,7 +6,7 @@ describe('OnChangesDemoComponent', () => {
   let component: OnChangesDemoComponent;
   let fixture: ComponentFixture<OnChangesDemoComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ OnChangesDemoComponent ]
     })
