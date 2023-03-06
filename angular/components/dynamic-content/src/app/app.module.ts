@@ -13,25 +13,20 @@ import {
 import { RuntimeContentComponent } from './runtime-content/runtime-content.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TemplatedListComponent,
-    DynamicContentComponent,
-    DynamicSample1Component,
-    DynamicSample2Component,
-    UnknownDynamicComponent,
-    RuntimeContentComponent
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule
-  ],
-  providers: [],
-  entryComponents: [
-    DynamicSample1Component,
-    DynamicSample2Component,
-    UnknownDynamicComponent
-  ],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        TemplatedListComponent,
+        DynamicContentComponent,
+        DynamicSample1Component,
+        DynamicSample2Component,
+        UnknownDynamicComponent,
+        RuntimeContentComponent
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
