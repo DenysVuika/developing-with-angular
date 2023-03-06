@@ -13,7 +13,7 @@ let result;
 
 try {
   result = child_process
-    .execSync('git diff --name-only origin/master... -- | cat')
+    .execSync('git diff --name-only origin/master... | cat')
     .toString();
 } catch (err) {
   console.error(err);
