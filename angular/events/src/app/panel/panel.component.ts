@@ -3,10 +3,9 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-panel',
   templateUrl: './panel.component.html',
-  styleUrls: ['./panel.component.css']
+  styleUrls: ['./panel.component.css'],
 })
 export class PanelComponent {
-
   displayBody = true;
 
   @Input()
@@ -16,10 +15,10 @@ export class PanelComponent {
   footer = 'My panel footer';
 
   @Output()
-  headerClick = new EventEmitter();
+  headerClick = new EventEmitter<void>();
 
   @Output()
-  footerClick = new EventEmitter();
+  footerClick = new EventEmitter<void>();
 
   onHeaderClicked() {
     this.displayBody = !this.displayBody;
@@ -29,5 +28,4 @@ export class PanelComponent {
   onFooterClicked() {
     this.footerClick.next();
   }
-
 }
