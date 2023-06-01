@@ -7,7 +7,7 @@
     "build": "rimraf dist && rollup -c"
   },
   "devDependencies": {
-    "rimraf": "^4.3.0",
+    "rimraf": "^5.0.1",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-typescript": "^0.8.1",
     "rollup-plugin-typescript2": "^0.30.0",
